@@ -6,3 +6,11 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
     modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
 }
+
+processResources {
+    inputs.property 'modid', rootProject.modid
+
+    filesMatching('*.java') {
+        expand modid: rootProject.modid
+    }
+}
