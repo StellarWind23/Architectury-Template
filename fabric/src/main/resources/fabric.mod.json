@@ -20,6 +20,9 @@
     ],
     "client": [
       "${maven_group}.${modid}.fabric.client.${mod_name}FabricClient"
+    ],
+    "fabric-datagen": [
+      "${maven_group}.${modid}.fabric.datagen.${mod_name}FabricDatagen"
     ]
   },
   "mixins": [
