@@ -43,6 +43,7 @@ processResources {
             mod_version              : project.version,
             author                   : rootProject.author,
             description              : rootProject.description,
+            homepage_url             : rootProject.homepage_url,
             issues_url               : rootProject.issues_url,
             license                  : rootProject.license,
             java_version             : rootProject.java_version,

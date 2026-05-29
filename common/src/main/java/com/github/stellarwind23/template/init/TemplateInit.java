@@ -1,4 +1,4 @@
-package com.stellarwind23.template.init;
+package com.github.stellarwind23.template.init;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

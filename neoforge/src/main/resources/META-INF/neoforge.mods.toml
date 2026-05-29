@@ -1,5 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
+license = "${license}"
 
 [[mods]]
 modId = "${modid}"
@@ -8,8 +9,7 @@ version = "${mod_version}"
 authors = "${author}"
 description = "${description}"
 issueTrackerURL = "${issues_url}"
-license = "${license}"
-logoFile = "./assets/${modid}/${modid}.png"
+logoFile = "/assets/${modid}/${modid}.png"
 
 [[dependencies.${modid}]]
 modId = "neoforge"

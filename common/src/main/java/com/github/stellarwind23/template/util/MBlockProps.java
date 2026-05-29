@@ -1,4 +1,4 @@
-package com.stellarwind23.template.util;
+package com.github.stellarwind23.template.util;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

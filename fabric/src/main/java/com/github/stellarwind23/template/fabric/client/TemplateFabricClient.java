@@ -1,4 +1,4 @@
-package com.stellarwind23.template.fabric.client;
+package com.github.stellarwind23.template.fabric.client;
 
 import net.fabricmc.api.ClientModInitializer;
 

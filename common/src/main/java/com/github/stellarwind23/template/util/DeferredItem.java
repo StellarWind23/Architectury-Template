@@ -1,4 +1,4 @@
-package com.stellarwind23.template.util;
+package com.github.stellarwind23.template.util;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.world.item.Item;

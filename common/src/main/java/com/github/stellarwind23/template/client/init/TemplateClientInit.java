@@ -1,4 +1,4 @@
-package com.stellarwind23.template.client.init;
+package com.github.stellarwind23.template.client.init;
 
 public class TemplateClientInit {
 

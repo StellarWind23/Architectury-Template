@@ -1,4 +1,4 @@
-package com.stellarwind23.template.util;
+package com.github.stellarwind23.template.util;
 
 public record StrPair(float Strength1, float Strength2) {
 
