@@ -39,7 +39,19 @@ processResources {
     inputs.property 'version', project.version
 
     filesMatching('fabric.mod.json') {
-        expand version: project.version
+        expand maven_group: $rootProject.maven_group
+        expand modid: $rootProject.modid
+        expand mod_name: $rootProject.archives_name
+        expand mod_version: project.version
+        expand author: $rootProject.author
+        expand description: $rootProject.description
+        expand issues_url: $rootProject.issues_url
+        expand license: $rootProject.license
+        expand java_version: $rootProject.java_version
+        expand fabric_api_version: $rootProject.fabric_api_version
+        expand fabric_loader_version: $rootProject.fabric_loader_version
+        expand minecraft_version: $rootProject.minecraft_version
+        expand architectury_api_version: $rootProject.architectury_api_version
     }
 }
 

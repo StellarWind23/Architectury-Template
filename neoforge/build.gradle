@@ -44,7 +44,17 @@ processResources {
     inputs.property 'version', project.version
 
     filesMatching('META-INF/neoforge.mods.toml') {
-        expand version: project.version
+        expand maven_group: $rootProject.maven_group
+        expand modid: $rootProject.modid
+        expand mod_name: $rootProject.archives_name
+        expand mod_version: project.version
+        expand author: $rootProject.author
+        expand description: $rootProject.description
+        expand issues_url: $rootProject.issues_url
+        expand license: $rootProject.license
+        expand neoforge_version: $rootProject.neoforge_version
+        expand minecraft_version: $rootProject.minecraft_version
+        expand architectury_api_version: $rootProject.architectury_api_version
     }
 }
 

@@ -1,6 +1,6 @@
 package com.stellarwind23.template.fabric;
 
-import com.stellarwind23.template.Template;
+import com.stellarwind23.template.init.TemplateInit;
 import net.fabricmc.api.ModInitializer;
 
 public final class TemplateFabric implements ModInitializer {
@@ -11,6 +11,6 @@ public final class TemplateFabric implements ModInitializer {
         // Proceed with mild caution.
 
         // Run our common setup.
-        Template.init();
+        TemplateInit.init();
     }
 }

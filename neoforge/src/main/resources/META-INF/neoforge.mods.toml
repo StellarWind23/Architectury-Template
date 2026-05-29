@@ -1,38 +1,36 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
-#issueTrackerURL = ""
-license = "MIT"
 
 [[mods]]
-modId = "template"
-version = "${version}"
-displayName = "Template"
-authors = ""
-description = '''
+modId = "${modid}"
+displayName = "${mod_name}"
+version = "${mod_version}"
+authors = "${author}"
+description = "${description}"
+issueTrackerURL = "${issues_url}"
+license = "${license}"
+logoFile = "./assets/${modid}/${modid}.png"
 
-'''
-#logoFile = ""
-
-[[dependencies.template]]
+[[dependencies.${modid}]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21,)"
+versionRange = "[${neoforge_version},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.template]]
+[[dependencies.${modid}]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.11,)"
+versionRange = "[${minecraft_version},)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.template]]
+[[dependencies.${modid}]]
 modId = "architectury"
 type = "required"
-versionRange = "[19.0.1,)"
+versionRange = "[${architectury_api_version},)"
 ordering = "AFTER"
 side = "BOTH"
 
 [[mixins]]
-config = "template.mixins.json"
+config = "${modid}.mixins.json"

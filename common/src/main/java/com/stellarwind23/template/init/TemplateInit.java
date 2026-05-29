@@ -1,6 +1,6 @@
-package com.stellarwind23.template;
+package com.stellarwind23.template.init;
 
-public final class Template {
+public final class TemplateInit {
     public static final String MOD_ID = "${modid}";
 
     public static void init() {
