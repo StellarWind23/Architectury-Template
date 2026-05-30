@@ -1,5 +1,6 @@
 package com.github.stellarwind23.template.fabric.datagen;
 
+import com.github.stellarwind23.template.fabric.datagen.provider.MEnglishUSLangProvider;
 import com.github.stellarwind23.template.fabric.datagen.provider.MModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -14,5 +15,6 @@ public class TemplateFabricDatagen implements DataGeneratorEntrypoint {
 
         //Add Providers
         pack.addProvider(MModelProvider::new);
+        pack.addProvider(MEnglishUSLangProvider::new);
     }
 }

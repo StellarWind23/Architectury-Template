@@ -2,6 +2,7 @@ package com.github.stellarwind23.template.content;
 
 import com.github.stellarwind23.template.init.TemplateInit;
 import com.github.stellarwind23.template.util.MItem;
+import com.github.stellarwind23.template.util.MTranslation;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -10,7 +11,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 
-import java.util.Objects;
 import java.util.Optional;
 
 public class TemplateItems {
@@ -48,6 +48,9 @@ public class TemplateItems {
 
         //Generate model if not block
         if(!mItem.modelType().equals("block")) MItem.REGISTERED_MOD_ITEMS.put(mItem, item);
+
+        //Generate translation
+        new MTranslation("item", name);
 
         return ITEMS.register(id, () -> item);
     }
