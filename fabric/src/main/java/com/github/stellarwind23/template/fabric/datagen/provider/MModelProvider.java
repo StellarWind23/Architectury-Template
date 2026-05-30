@@ -1,6 +1,5 @@
 package com.github.stellarwind23.template.fabric.datagen.provider;
 
-import com.github.stellarwind23.template.init.TemplateInit;
 import com.github.stellarwind23.template.util.MBlock;
 import com.github.stellarwind23.template.util.MItem;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
@@ -28,7 +27,6 @@ public class MModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(@NonNull ItemModelGenerators itemModelGenerator) {
-        TemplateInit.LOGGER.warn(MItem.REGISTERED_MOD_ITEMS.size() + " THINGS ARE IN THE ITEM LIST!!!!!!!!!!!!!!!!!!!!\n\n\n\n\n");
         for(MItem<?> mItem : MItem.MOD_ITEMS) {
             if(MItem.REGISTERED_MOD_ITEMS.get(mItem) == null) continue;
             switch (mItem.modelType()) {
