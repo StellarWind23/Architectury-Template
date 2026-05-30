@@ -1,5 +1,6 @@
 package com.github.stellarwind23.template.fabric.datagen.provider;
 
+import com.github.stellarwind23.template.init.TemplateInit;
 import com.github.stellarwind23.template.util.MBlock;
 import com.github.stellarwind23.template.util.MItem;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
@@ -17,7 +18,8 @@ public class MModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(@NonNull BlockModelGenerators blockStateModelGenerator) {
-        for(MBlock mBlock : MBlock.MOD_BLOCKS) {
+        for(MBlock<?> mBlock : MBlock.MOD_BLOCKS) {
+            if(MBlock.REGISTERED_MOD_BLOCKS.get(mBlock) == null) continue;
             switch (mBlock.modelType()) {
                 default -> blockStateModelGenerator.createTrivialCube(MBlock.REGISTERED_MOD_BLOCKS.get(mBlock));
             }
@@ -26,10 +28,12 @@ public class MModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(@NonNull ItemModelGenerators itemModelGenerator) {
-        for(MItem mItem : MItem.MOD_ITEMS) {
+        TemplateInit.LOGGER.warn(MItem.REGISTERED_MOD_ITEMS.size() + " THINGS ARE IN THE ITEM LIST!!!!!!!!!!!!!!!!!!!!\n\n\n\n\n");
+        for(MItem<?> mItem : MItem.MOD_ITEMS) {
+            if(MItem.REGISTERED_MOD_ITEMS.get(mItem) == null) continue;
             switch (mItem.modelType()) {
                 case "handheld" -> itemModelGenerator.generateFlatItem(MItem.REGISTERED_MOD_ITEMS.get(mItem), ModelTemplates.FLAT_HANDHELD_ITEM);
-                default -> itemModelGenerator.createFlatItemModel(MItem.REGISTERED_MOD_ITEMS.get(mItem), ModelTemplates.FLAT_ITEM);
+                default -> itemModelGenerator.generateFlatItem(MItem.REGISTERED_MOD_ITEMS.get(mItem), ModelTemplates.FLAT_ITEM);
             }
         }
     }
