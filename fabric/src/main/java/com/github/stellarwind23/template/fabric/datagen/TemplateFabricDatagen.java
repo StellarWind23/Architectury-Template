@@ -2,6 +2,7 @@ package com.github.stellarwind23.template.fabric.datagen;
 
 import com.github.stellarwind23.template.fabric.datagen.provider.MEnglishUSLangProvider;
 import com.github.stellarwind23.template.fabric.datagen.provider.MModelProvider;
+import com.github.stellarwind23.template.init.TemplateInit;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import org.jspecify.annotations.NonNull;
