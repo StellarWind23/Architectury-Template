@@ -3,14 +3,15 @@ package com.github.stellarwind23.template.util;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 
-public record MBlock<T extends Block>(Function<BlockBehaviour.Properties, T> blockConstructor, Optional<BlockBehaviour.Properties> feedInProps) {
+public record MBlock<T extends Block>(String blockName, String modelType, Function<BlockBehaviour.Properties, T> blockConstructor, Optional<BlockBehaviour.Properties> feedInProps) {
 
-    public static int blockCount = 0;
+    public static final List<MBlock<?>> MOD_BLOCKS = new ArrayList<>();
+    public static HashMap<MBlock<?>, Block> REGISTERED_MOD_BLOCKS = new HashMap<>();
 
     public MBlock {
-        blockCount += 1;
+        MOD_BLOCKS.add(this);
     }
 }
